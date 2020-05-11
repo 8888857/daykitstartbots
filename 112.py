@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from discord import utils
- 
+import os
 #импорт папки конфигов
 import config
 
