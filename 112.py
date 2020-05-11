@@ -52,3 +52,5 @@ async def обр(ctx):#команда
 #bot.run(config.TOKEN)
 
 token = os.enverion.get('BOT_TOKEN')
+
+bot.run(token)
