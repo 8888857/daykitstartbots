@@ -1,4 +1,4 @@
 diskord.py
-aiohttp
+https://pypi.org/project/discord.py/
 websockets
 chardet
