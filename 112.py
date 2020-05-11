@@ -51,6 +51,5 @@ async def обр(ctx):#команда
 #поле для токена бота
 #bot.run(config.TOKEN)
 
-token = os.enverion.get('BOT_TOKEN')
-
+token = os.environ.get("BOT_TOKEN")     
 bot.run(str(token))
