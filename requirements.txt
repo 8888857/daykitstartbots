@@ -1,4 +1,4 @@
-diskord.py
+discord.py
 aiohttp
 websockets
 chardet
