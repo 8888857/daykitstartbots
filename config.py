@@ -1,4 +1,4 @@
-TOKEN = 'NzA4NjMwMDM1MzU5MDcyMjY2.XrkuLg.NewoZTEMvsfLouR1n2EEQxKvZTA'#токен бота(получать тут https://discord.com/developers)
+TOKEN = ''#токен бота(получать тут https://discord.com/developers)
 
 #котегория комады /прав
 PRAV1 = "ПРАВИЛА ДЛЯ ВСЕХ ВЫЗЫВАЮТЬСЯ КОМАНДОЙ- ***__/прав1__***\nПРАВИЛА ДЛЯ МОДЕРАТОРОВ ВЫЗЫВАЮТЬСЯ КОМАНДОЙ- __***/прав2***__"

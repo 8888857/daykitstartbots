@@ -47,5 +47,8 @@ async def обр3(ctx):#команда
 @bot.command()
 async def обр(ctx):#команда
     await ctx.send(config.ob) #текст который выведеться
+
 #поле для токена бота
-bot.run(config.TOKEN)
+#bot.run(config.TOKEN)
+
+token = os.enverion.get('BOT_TOKEN')
