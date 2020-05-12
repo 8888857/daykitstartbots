@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from discord import utils
 import os
+from discord.ext.commands import has_permissions
 #импорт папки конфигов
 import config
 
@@ -47,6 +48,17 @@ async def обр3(ctx):#команда
 @bot.command()
 async def обр(ctx):#команда
     await ctx.send(config.ob) #текст который выведеться
+
+@bot.command(pass_context=True)
+@has_permissions(manage_messages=True)
+async def очистить(ctx, amount=100):
+    await ctx.channel.purge(limit=amount)
+
+@bot.command(pass_context=True)
+@has_permissions(manage_messages=True)
+async def сказать(ctx, arg = 'Всем привет'):
+    await ctx.send(arg)
+    await ctx.message.delete()
 
 #поле для токена бота
 #bot.run(config.TOKEN)
