@@ -56,7 +56,7 @@ async def очистить(ctx, amount=100):
 
 @bot.command(pass_context=True)
 @has_permissions(manage_messages=True)
-async def сказать(ctx, arg = 'Всем привет'):
+async def озв(ctx, arg = ('ПРИВЕТ, Я РОБОТ DayKitStart`а'):
     await ctx.send(arg)
     await ctx.message.delete()
 
