@@ -76,7 +76,7 @@ async def калк(ctx, a, operator, b):
     await ctx.send("Ответ: " + str(OPERATIONS[operator](int(a), int(b))))
 
 #поле для токена бота
-#bot.run("")
+bot.run("NzA5NzkwMTY0MDM3NDAyNjc1.XrrCTQ.7iDj7QYI7D0Pfe6qt8UncrzL3qo")
 
-token = os.environ.get("BOT_TOKEN")     
-bot.run(str(token))
+#token = os.environ.get("BOT_TOKEN")     
+#bot.run(str(token))
