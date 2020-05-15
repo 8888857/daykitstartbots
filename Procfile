@@ -1,1 +1,1 @@
-worker: python 112.py
+worker: python bot.py
