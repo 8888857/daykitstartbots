@@ -5,6 +5,7 @@ from discord.ext.commands import has_permissions
 import config
 import time
 from discord.utils import get
+import os
 
 bot=commands.Bot(command_prefix=config.prefix)
 
@@ -174,6 +175,6 @@ async def правила(ctx):#команда
     await ctx.send(config.PRAV1) #текст который выведеться
 
 
-bot.run("NzEwODY2NDM0Mjc1ODAzMTc2.Xr6sCw.DyGS3omiHm7ppkpoy3w5gODnvas")
-#token = os.environ.get("BOT_TOKEN")     
-#bot.run(str(token))
+#bot.run("")
+token = os.environ.get("BOT_TOKEN")     
+bot.run(str(token))
