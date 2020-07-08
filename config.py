@@ -1,12 +1,13 @@
 #TOKEN='TOKEN'
 
 log_channel=710766896022028292  
-messagelog_channel=710471799871111228 730386681747865611
+messagelog_channel=730386681747865611
+messagelog_channel2=710471799871111228
 join_role=
 muted_role=709807280014753822
 message_from_users_channel=710766831849439302
 prefix='!'
-welcome_channel=
+welcome_channel=710471799871111228
 
 #котегория комады /прав
 PRAV1 = "ПРАВИЛА ДЛЯ ВСЕХ ВЫЗЫВАЮТЬСЯ КОМАНДОЙ- ***__+прав1__***\nПРАВИЛА ДЛЯ МОДЕРАТОРОВ ВЫЗЫВАЮТЬСЯ КОМАНДОЙ- __***+прав2***__"
