@@ -25,15 +25,10 @@ async def on_message(message):
     
 @bot.event
 async def on_message(message):
-    if message.channel.id == 728367780721852476:
+    if message.channel.id == 729417153383759882 or message.channel.id == 728367780721852476:
         await message.add_reaction("👍")
         await message.add_reaction("👎")
-      
-@bot.event
-async def on_message(message):
-    if message.channel.id == 729417153383759882:
-        await message.add_reaction("👍")
-        await message.add_reaction("👎")
+
 
 @bot.event
 async def on_member_join(member):
