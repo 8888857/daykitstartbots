@@ -22,6 +22,18 @@ async def on_message(message):
         if message.channel.id != config.messagelog_channel:
             await channel.send(message.channel.name+": "+authormes+": "+text)
     await bot.process_commands(message)
+    
+@bot.event
+async def on_message(message):
+    if message.channel.id == 728367780721852476:
+        await message.add_reaction(":thumbsup:")
+        await message.add_reaction(":thumbsdown:")
+      
+@bot.event
+async def on_message(message):
+    if message.channel.id == 729417153383759882:
+        await message.add_reaction(":thumbsup:")
+        await message.add_reaction(":thumbsdown:")
 
 @bot.event
 async def on_member_join(member):
