@@ -86,7 +86,6 @@ async def размут(ctx, member: discord.Member,*,reason=''):
         await log_channel.send("Пользователь " + memberunmuted + "(" + str(member.id) + ") " + " размучен по причине " + reason)
 
 @bot.command()
-@has_permissions(administrator=True)
 async def спам(ctx, key, amount: int, *,text: str):
     if key == '1':
         for i in range(0, amount):
