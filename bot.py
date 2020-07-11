@@ -21,14 +21,11 @@ async def on_message(message):
     if message.author.bot==False:
         if message.channel.id != config.messagelog_channel:
             await channel.send(message.channel.name+": "+authormes+": "+text)
-    await bot.process_commands(message)
-    
-@bot.event
-async def on_message(message):
     if message.channel.id == 729417153383759882 or message.channel.id == 728367780721852476:
         await message.add_reaction("👍")
         await message.add_reaction("👎")
-
+    await bot.process_commands(message)
+    
 
 @bot.event
 async def on_member_join(member):
@@ -176,14 +173,10 @@ async def прав1(ctx):#команда
     await ctx.send(config.p1) #текст который выведеться
 
 
-#команда /прав
-#@bot.command()
-#async def правила(ctx):#команда
-#    await ctx.send(config.PRAV1) #текст который выведеться
-
-@bot.command(aliases = ['правила', 'rules'])
-async def __rules(ctx):
-    await ctx.send(config.PRAV1)
+команда /прав
+@bot.command()
+async def правила(ctx):#команда
+    await ctx.send(config.PRAV1) #текст который выведеться
 
 #bot.run("")
 token = os.environ.get("BOT_TOKEN")     
