@@ -18,12 +18,12 @@ async def on_message(message):
     channel=bot.get_channel(config.messagelog_channel)
     text = str(message.content)
     authormes=str(message.author.name)
-    if message.author.bot==False:
-        if message.channel.id != config.messagelog_channel:
-            await channel.send(message.channel.name+": "+authormes+": "+text)
     if message.channel.id == 729417153383759882 or message.channel.id == 728367780721852476:
         await message.add_reaction("👍")
         await message.add_reaction("👎")
+    if message.author.bot==False:
+        if message.channel.id != config.messagelog_channel:
+            await channel.send(message.channel.name+": "+authormes+": "+text)
     await bot.process_commands(message)
     
 
@@ -43,12 +43,11 @@ async def сказать(ctx, *,text):
 @bot.command(pass_context=True)
 @has_permissions(manage_messages=True)
 async def очистить(ctx, amount=1000):
-    cleared=await ctx.channel.purge(limit=amount)
+    cleared=await ctx.channel.purge(limit=int(amount) + 1)
     cleared_count=str(len(cleared))
     message_bot=await ctx.send("Удалено "+cleared_count+" сообщений")
-    channel_delete=message_bot.channel.id
-    time.sleep(4)
-    await bot.http.delete_message(channel_delete, message_bot.id)
+    await asyncio.sleep(4)
+    await message_bot.delete()
 
 @bot.command()
 @has_permissions(administrator=True)
@@ -173,7 +172,7 @@ async def прав1(ctx):#команда
     await ctx.send(config.p1) #текст который выведеться
 
 
-команда /прав
+#команда /прав
 @bot.command()
 async def правила(ctx):#команда
     await ctx.send(config.PRAV1) #текст который выведеться
