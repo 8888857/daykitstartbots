@@ -6,6 +6,7 @@ import config
 import time
 from discord.utils import get
 import os
+import asyncio
 
 bot=commands.Bot(command_prefix=config.prefix)
 
