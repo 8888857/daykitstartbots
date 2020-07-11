@@ -177,10 +177,13 @@ async def прав1(ctx):#команда
 
 
 #команда /прав
-@bot.command()
-async def правила(ctx):#команда
-    await ctx.send(config.PRAV1) #текст который выведеться
+#@bot.command()
+#async def правила(ctx):#команда
+#    await ctx.send(config.PRAV1) #текст который выведеться
 
+@bot.command(aliases = ['правила', 'rules'])
+async def __rules(ctx):
+    await ctx.send(config.PRAV1)
 
 #bot.run("")
 token = os.environ.get("BOT_TOKEN")     
