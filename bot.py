@@ -26,6 +26,11 @@ async def on_message(message):
         if message.channel.id != config.messagelog_channel:
             await channel.send(message.channel.name+": "+authormes+": "+text)
     await bot.process_commands(message)
+
+@commands.command()
+async def google(self, ctx, *, request):
+    r = request.replace(" ", "%20")
+    await ctx.send(f"https://google.gik-team.com/?q={r}")
     
 
 @bot.event
