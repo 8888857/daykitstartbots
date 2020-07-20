@@ -30,7 +30,7 @@ async def on_message(message):
 @bot.command()
 async def google(self, ctx, *, request):
     r = request.replace(" ", "%20")
-    await ctx.send(f"https://google.gik-team.com/?q={r}")
+    await ctx.send("https://google.gik-team.com/?q=" + r)
     
 
 @bot.event
