@@ -28,7 +28,7 @@ async def on_message(message):
     await bot.process_commands(message)
 @bot.command()    
 async def google (ctx, *query):
-   await ctx.send("www.google.com/?search=" + "%20".join(query?)
+   await ctx.send("www.google.com/?search=" + "%20" + ".join(" + query + "?")
 
 @bot.event
 async def on_member_join(member):
