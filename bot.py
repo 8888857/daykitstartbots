@@ -27,7 +27,7 @@ async def on_message(message):
             await channel.send(message.channel.name+": "+authormes+": "+text)
     await bot.process_commands(message)
 
-@commands.command()
+@bot.command()
 async def google(self, ctx, *, request):
     r = request.replace(" ", "%20")
     await ctx.send(f"https://google.gik-team.com/?q={r}")
