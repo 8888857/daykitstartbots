@@ -26,12 +26,9 @@ async def on_message(message):
         if message.channel.id != config.messagelog_channel:
             await channel.send(message.channel.name+": "+authormes+": "+text)
     await bot.process_commands(message)
-
-@bot.command()
-async def google(self, ctx, *, request):
-    r = request.replace(" ", "%20")
-    await ctx.send("https://google.gik-team.com/?q=" + r)
-    
+@bot.command()    
+async def google (ctx, *query):
+   await ctx.send("www.google.com/?search=" + "%20".join(query?)
 
 @bot.event
 async def on_member_join(member):
