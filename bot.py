@@ -13,6 +13,18 @@ bot=commands.Bot(command_prefix=config.prefix)
 @bot.event
 async def on_ready():
     print("В сети")
+    
+    
+    
+@bot.event
+async def on_raw_reaction_add(payload):
+    if payload.emoji.name == '❌':
+        channel = bot.get_channel(payload.channel_id)
+        message = await channel.fetch_message(payload.message_id)
+        for em in message.reactions:
+            if em.emoji == '❌':
+                if em.count >= 3:
+                    await message.delete()
 
 @bot.event
 async def on_message(message):
