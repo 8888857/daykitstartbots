@@ -10,7 +10,6 @@ import asyncio
 
 bot=commands.Bot(command_prefix=config.prefix)
 
-bot=commands.Bot(command_prefix=config.prefix2)
 
 @bot.event
 async def on_ready():
