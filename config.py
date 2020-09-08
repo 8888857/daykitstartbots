@@ -6,7 +6,8 @@ messagelog_channel=730386681747865611
 join_role=707187627035459634
 muted_role=709807280014753822
 message_from_users_channel=710766831849439302
-prefix='!'
+prefix='+'
+prefix2='<@710866434275803176>'
 welcome_channel=710471799871111228
 
 #котегория комады /прав
