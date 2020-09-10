@@ -32,7 +32,7 @@ async def on_message(message):
     channel=bot.get_channel(config.messagelog_channel)
     text = str(message.content)
     authormes=str(message.author.name)
-    if message.channel.id == 729417153383759882 or message.channel.id == 728367780721852476:
+    if message.channel.id == 729417153383759882 or message.channel.id == 728367780721852476 or message.channel.id == 730172284215492768:
         await message.add_reaction("👍")
         await message.add_reaction("👎")
     if message.author.bot==False:
