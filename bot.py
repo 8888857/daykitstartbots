@@ -8,8 +8,6 @@ from discord.utils import get
 import os
 import asyncio
 
-bot = commands.Bot(command_prefix = prefix)
-
 def prefix(self, bot, ctx):
     if ctx.guild is not None:
         if bot is not None:
@@ -17,7 +15,10 @@ def prefix(self, bot, ctx):
         else:
             return '+'
     else:
-        return '<@710866434275803176>'
+        return '+'
+
+
+bot = commands.Bot(command_prefix = prefix)
 
 @bot.event
 async def on_ready():
