@@ -8,8 +8,16 @@ from discord.utils import get
 import os
 import asyncio
 
-bot=commands.Bot(command_prefix=config.prefix)
+bot = commands.Bot(command_prefix = prefix)
 
+def prefix(self, bot, ctx):
+    if ctx.guild is not None:
+        if bot is not None:
+            return commands.when_mentioned_or(prefix)(bot, ctx)
+        else:
+            return '+'
+    else:
+        return '<@710866434275803176>'
 
 @bot.event
 async def on_ready():
