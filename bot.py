@@ -13,7 +13,7 @@ def prefix(self, bot, ctx):
         if bot is not None:
             return commands.when_mentioned_or(prefix)(bot, ctx)
         else:
-            return '--'
+            return '+'
     else:
         return '+'
 
