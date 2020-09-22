@@ -8,7 +8,7 @@ from discord.utils import get
 import os
 import asyncio
 
-bot = commands.Bot(command_prefix = '+')
+bot = commands.Bot(command_prefix = config.prefix)
 
 @bot.event
 async def on_ready():
