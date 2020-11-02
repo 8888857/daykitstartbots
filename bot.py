@@ -11,11 +11,9 @@ import asyncio
 bot = commands.Bot(command_prefix = config.prefix)
 
 @bot.event
-async def on_ready():
+async def on_ready(bot.load_extension("jishaku")):
     print("В сети")
-    
-    
-    
+ 
 @bot.event
 async def on_raw_reaction_add(payload):
     if payload.emoji.name == '❌':
