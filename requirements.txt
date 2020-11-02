@@ -2,3 +2,4 @@ discord.py==1.4.1
 aiohttp==3.6.2
 websockets==8.1
 chardet==3.0.4
+jishaku==1.19.2.202
