@@ -10,8 +10,10 @@ import asyncio
 
 bot = commands.Bot(command_prefix = config.prefix)
 
+bot.load_extension("jishaku")
+
 @bot.event
-async def on_ready(bot.load_extension("jishaku")):
+async def on_ready():
     print("В сети")
  
 @bot.event
