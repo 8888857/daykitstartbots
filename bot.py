@@ -27,23 +27,23 @@ async def on_raw_reaction_add(payload):
                     await message.delete()
 
 @bot.event
-async def on_message(message):
+async def on_message(msg):
     channel=bot.get_channel(config.messagelog_channel)
-    text = str(message.content)
-    authormes=str(message.author.name)
+    text = str(msg.content)
+    authormes=str(msg.author.name)
     if msg.channel.id == 730172284215492768:
         await msg.publish()
     if msg.channel.id == 742389690010959922:
         await msg.publish()
     if msg.channel.id == 762354267436089395:
         await msg.publish()
-    if message.channel.id == 729417153383759882 or message.channel.id == 728367780721852476 or message.channel.id == 730172284215492768:
-        await message.add_reaction("👍")
-        await message.add_reaction("👎")
-    if message.author.bot==False:
-        if message.channel.id != config.messagelog_channel:
-            await channel.send(message.channel.name+": "+authormes+": "+text)
-    await bot.process_commands(message)
+    if msg.channel.id == 729417153383759882 or message.channel.id == 728367780721852476 or message.channel.id == 730172284215492768:
+        await msg.add_reaction("👍")
+        await msg.add_reaction("👎")
+    if msg.author.bot==False:
+        if msg.channel.id != config.messagelog_channel:
+            await channel.send(msg.channel.name+": "+authormes+": "+text)
+    await bot.process_commands(msg)
 
 @bot.event
 async def on_member_join(member):
