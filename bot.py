@@ -37,7 +37,7 @@ async def on_message(msg):
         await msg.publish()
     if msg.channel.id == 762354267436089395:
         await msg.publish()
-    if msg.channel.id == 729417153383759882 or message.channel.id == 728367780721852476 or message.channel.id == 730172284215492768:
+    if msg.channel.id == 729417153383759882 or msg.channel.id == 728367780721852476 or msg.channel.id == 730172284215492768:
         await msg.add_reaction("👍")
         await msg.add_reaction("👎")
     if msg.author.bot==False:
