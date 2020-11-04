@@ -31,6 +31,12 @@ async def on_message(message):
     channel=bot.get_channel(config.messagelog_channel)
     text = str(message.content)
     authormes=str(message.author.name)
+    if msg.channel.id == 730172284215492768:
+        await msg.publish()
+    if msg.channel.id == 742389690010959922:
+        await msg.publish()
+    if msg.channel.id == 762354267436089395:
+        await msg.publish()
     if message.channel.id == 729417153383759882 or message.channel.id == 728367780721852476 or message.channel.id == 730172284215492768:
         await message.add_reaction("👍")
         await message.add_reaction("👎")
