@@ -28,9 +28,9 @@ async def on_raw_reaction_add(payload):
 
 @bot.event
 async def on_message(msg):
-    channel=bot.get_channel(config.messagelog_channel)
-    text = str(msg.content)
-    authormes=str(msg.author.name)
+#    channel=bot.get_channel(config.messagelog_channel)
+#    text = str(msg.content)
+#    authormes=str(msg.author.name)
     if msg.channel.id == 730172284215492768:
         await msg.publish()
     if msg.channel.id == 742389690010959922:
@@ -45,8 +45,8 @@ async def on_message(msg):
         await msg.add_reaction("👍")
         await msg.add_reaction("👎")
     if msg.author.bot==False:
-        if msg.channel.id != config.messagelog_channel:
-            await channel.send(msg.channel.name+": "+authormes+": "+text)
+#        if msg.channel.id != config.messagelog_channel:
+#            await channel.send(msg.channel.name+": "+authormes+": "+text)
     await bot.process_commands(msg)
 
 @bot.event
@@ -179,25 +179,25 @@ async def калк(ctx, a, operator, b):
     await ctx.send("Ответ: " + str(OPERATIONS[operator](int(a), int(b))))
 
 #командо помощь
-@bot.command()
-async def помощь(ctx):#команда
-    await ctx.send(config.o1) #текст который выведеться
+#@bot.command()
+#async def помощь(ctx):#команда
+#    await ctx.send(config.o1) #текст который выведеться
 
 #команда /прав2
-@bot.command()
-async def прав2(ctx):#команда
-    await ctx.send(config.p2) #текст который выведеться
+#@bot.command()
+#async def прав2(ctx):#команда
+#    await ctx.send(config.p2) #текст который выведеться
 
 #команда/прав1
-@bot.command()
-async def прав1(ctx):#команда
-    await ctx.send(config.p1) #текст который выведеться
+#@bot.command()
+#async def прав1(ctx):#команда
+#    await ctx.send(config.p1) #текст который выведеться
 
 
 #команда /прав
-@bot.command()
-async def правила(ctx):#команда
-    await ctx.send(config.PRAV1) #текст который выведеться
+#@bot.command()
+#async def правила(ctx):#команда
+#    await ctx.send(config.PRAV1) #текст который выведеться
 
 #bot.run("")
 token = os.environ.get("BOT_TOKEN")     
