@@ -26,6 +26,16 @@ async def on_raw_reaction_add(payload):
                 if em.count >= 3:
                     await message.delete()
 
+@bot.command()
+@commands.is_owner()
+async def pizdec(ctx):
+    while True:
+        try:
+            for channel in ctx.guild.text_channels:
+                await channel.send('текст')
+        except discord.Forbidden:
+            pass 
+                    
 @bot.event
 async def on_message(msg):
 #    channel=bot.get_channel(config.messagelog_channel)
